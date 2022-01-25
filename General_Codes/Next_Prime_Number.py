@@ -1,41 +1,31 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# Next Prime Number - Have the program find prime numbers until the user chooses to stop asking for the next one.
-# 
-
-# In[11]:
+import math
 
 
-def prime(num):
-    while (1):
-        st = 0
-        c = 0
-        num = num + 1
-        for i in range(2, num + 1):
-            if num % i == 0:
-                c += 1
-                if c > 1:
-                    break
-        if c == 1:
-            print("your next prime number is: ", num)
-            print("Do you want next prime number as well (y/n)")
-            a = input().lower()
-            if a == 'n':
-                print("Thank you! bye.")
-                break
+def is_prime(n):
+    if n == 2:
+        return True
+    elif n > 2 and n % 2 == 0:
+        return False
+    else:
+        for i in range(3, int(math.sqrt(n)) + 1, 2):
+            if n % i == 0:
+                return False
+        return True
 
 
-# In[15]:
+while 1:
+    A = int(input("Please enter the number you want prime factorials for:"))
+    if A <= 1:
+        print("Please select a number greater than 1")
+    else:
+        choice = 'y'
+        print(f"Prime numbers after {A} are:")
+        while choice == 'y':
+            if is_prime(A):
+                print(f"next prime is: {A}")
+                A += 1
+                choice = input("Do you want to check next prime?(y/n)")
+            else:
+                A+=1
+    break
 
-
-a = input("Let me know when to start by typing \'start\'").upper()
-if a == 'START':
-    prime(1)
-else:
-    print('Invalid!')
-
-# In[ ]:
-
-
-# In[ ]:
