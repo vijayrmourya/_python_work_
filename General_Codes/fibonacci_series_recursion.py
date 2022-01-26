@@ -13,7 +13,8 @@ def fibonacciRecursion(numb):
     if (numb <= 1):
         return numb
     else:
-        return (fibonacciRecursion(numb - 1) + fibonacciRecursion(numb - 2))
+        return fibonacciRecursion(numb - 1) + fibonacciRecursion(numb - 2)
+
 
 numb = int(input('Enter some random number = '))
 print("The Fibonacci Sequence till the given number", numb, ' = ')

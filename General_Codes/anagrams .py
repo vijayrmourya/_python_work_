@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
-
 # Give Two string inputs for the codes to check weather they are anagram or not
-
-# In[1]:
-
 
 # Input:
 # vijay 
@@ -12,10 +8,6 @@
 
 # Output:
 # "vijay " & "mourya" are not Anagrams
-
-
-# In[1]:
-
 
 a = input()
 b = input()
@@ -26,9 +18,6 @@ if sorted(c) == sorted(d):
     print('"' + a + '" & "' + b + '" are Anagrams')
 else:
     print('"' + a + '" & "' + b + '" are not Anagrams')
-
-# In[2]:
-
 
 ##solution 2
 use = ''
@@ -48,5 +37,3 @@ if flag == 1:
     print('"' + a + '" & "' + b + '" are not Anagrams')
 else:
     print('"' + a + '" & "' + b + '" are Anagrams')
-
-# In[ ]:

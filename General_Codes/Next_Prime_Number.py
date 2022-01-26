@@ -26,6 +26,5 @@ while 1:
                 A += 1
                 choice = input("Do you want to check next prime?(y/n)")
             else:
-                A+=1
+                A += 1
     break
-

@@ -1,10 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# problem statement is to have 2 array 1st one with n elements and second one with same element as 1st but one random element weil be deleted find that missing element
-
-# In[ ]:
-
+# problem statement is to have 2 array 1st one with n elements and second one with same element as 1st but one random
+# element weil be deleted find that missing element
 
 # input:
 # 1 3 9 7 4 2 6 8 5
@@ -13,19 +11,12 @@
 # output:
 # missing number is: 5
 
-
-# In[32]:
-
-
 a = input().split(' ')
 b = input().split(' ')
 c = [int(i) for i in a]
 d = [int(i) for i in b]
 # solution1
 print('missing number is: ' + str(sum(c) - sum(d)))
-
-# In[35]:
-
 
 # solution2
 flag = 0
@@ -36,5 +27,3 @@ for i in c:
         break
 if flag == 0:
     print('no element missing')
-
-# In[ ]:

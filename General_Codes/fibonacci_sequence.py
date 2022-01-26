@@ -13,11 +13,11 @@
 
 while (1):
     A = int(input("Please tell the length of series, (range 1 to 1000) :"))
-    if (A > 1 and A < 1001):
+    if A > 1 and A < 1001:
         print(f"Here is your Series of {A} Numbers:")
         num1, num2 = 0, 1
         for i in range(1, A + 1):
-            print("Number = ",num2)
+            print("Number = ", num1)
             num1, num2 = num2, num1 + num2
         break
     else:
