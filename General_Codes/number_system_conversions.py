@@ -181,8 +181,8 @@ while 1:
             octal_number = decimal_to_octal(decimal_number)
             print(f"Octal number of Hex({number}) is {str(int(octal_number))}")
             binary_number = decimal_to_binary(decimal_number)
-            print(f"Binary number of Hex({str(int(number))}) is {str(math.trunc(float(binary_number)))}")
+            print(f"Binary number of Hex({str(number)}) is {str(math.trunc(float(binary_number)))}")
         else:
-            print("Please enter valid Binary number")
+            print("Please enter valid Hex-Decimal number or change the Number system and try again")
     else:
         print("Please make a valid choice")
