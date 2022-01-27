@@ -37,6 +37,7 @@ This project contains all my python based projects and practice codes.
   - solve_quadratic_equation.py
   - string_compression.py : Counting number if occurance of a word in string
   - text_to_speech.py
+  - credit_card_validator.py
 - Python_Data_Structure:
   - Deque_Using_List.py
   - Doubly_Linked_List.py
