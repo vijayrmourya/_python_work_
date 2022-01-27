@@ -14,7 +14,7 @@ def is_prime(n):
 
 
 while 1:
-    A = int(input("Please enter the number you want prime factorials for:"))
+    A = int(input("Please enter the number you want to check prime numbers from:"))
     if A <= 1:
         print("Please select a number greater than 1")
     else:
