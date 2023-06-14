@@ -18,6 +18,7 @@ Therefore, "listen" and "silent" are anagrams.
 
 On the other hand, if two words have different sets of characters or the frequency of any character differs between the two words, they are not anagrams.
 """
+__all__ = ['check_multiple_words_anagram', 'check_two_word_anagram']
 
 
 def check_two_word_anagram(word_1: str, word_2: str):
@@ -35,37 +36,37 @@ def check_two_word_anagram(word_1: str, word_2: str):
         else:
             return False
     except TypeError as TE:
-        print("Invalid input data type!", type(word_1), type(word_2))
+        print(f"Invalid input data type! {TE}\n{word_1}:{type(word_1)},{word_2}{type(word_2)}")
         return False
     except Exception as E:
         print("Unexpected exception!")
         return False
 
 
-def check_multiple_words_anagram(*check_if_words_anagram: list(str)):
+def check_multiple_words_anagram(*check_anagrams):
     """
     To check anagrams
-    :param check_if_words_anagram(list(str)): input words
+    :param check_anagrams(list(str)): input words
     :return(bool): True if the input is anagram else False
     """
     try:
-        if len(check_if_words_anagram) == 1:
+        if len(check_anagrams) == 1:
             print("Provide 2 words at least")
             return False
         word_array = []
-        word_size = len(set(check_if_words_anagram[0]))
-        for words in check_if_words_anagram:
-            print(set(words))
-            if word_size != len(set(words)):
+        word_size = len(set(''.join(e.lower() for e in check_anagrams[0] if e.isalnum())))
+        for word in check_anagrams:
+            word = ''.join(e.lower() for e in word if e.isalnum())
+            if word_size != len(set(''.join(e.lower() for e in word if e.isalnum()))):
                 return False
-            word_array.append(''.join(e.lower() for e in words if e.isalnum()))
-            word_size = len(set(words))
+            word_array.append(''.join(e.lower() for e in word if e.isalnum()))
+            word_size = len(set(word))
         if len(set("".join(word_array))) != word_size:
             return False
         else:
             return True
     except TypeError as TE:
-        print("Invalid input data type!", type(word_1), type(word_2))
+        print(f"Invalid input data type! {TE}\n{check_anagrams}:{type(check_anagrams)}")
         return False
     except Exception as E:
         print("Unexpected exception!")
